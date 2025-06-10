@@ -4,6 +4,8 @@
 import asyncio
 import random
 import uuid
+import dotenv
+import os
 
 # Using the Python Device SDK for IoT Hub:
 #   https://github.com/Azure/azure-iot-sdk-python
@@ -15,7 +17,7 @@ from azure.iot.device.aio import IoTHubDeviceClient
 from azure.iot.device import Message
 
 # The device connection string to authenticate the device with your IoT hub.
-CONNECTION_STRING = "HostName=nexoiot.azure-devices.net;DeviceId=iot_sensor;SharedAccessKey=825zzIf263jabbNvmkwSXcMdkA3RFiINNMTrHnG+cTs="
+CONNECTION_STRING = os.getenv("CONNECTION_STRING")
 
 MESSAGE_TIMEOUT = 10000
 
