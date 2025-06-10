@@ -16,6 +16,8 @@ import os
 from azure.iot.device.aio import IoTHubDeviceClient
 from azure.iot.device import Message
 
+dotenv.load_dotenv()
+
 # The device connection string to authenticate the device with your IoT hub.
 CONNECTION_STRING = os.getenv("CONNECTION_STRING")
 
